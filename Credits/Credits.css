@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+.Credits {
+    color: white;
+    font-size: 150px;
+    left: 700px;
+    position: absolute;
+}
+.Creators {
+    color: white;
+    font-size: 50px;
+    left: 850px;
+    top: 250px;
+    position: absolute;
+}
