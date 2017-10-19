@@ -14,15 +14,23 @@
 
 
             <div class="Menu">
-                <button class="MainMenu" onclick="location.href='file:///C:/Users/allar/Desktop/html/ZakLampGame/A--ZakLampGame--V2--/Hole%20Game/Flashlight-Shizzle.html'">Main Menu</button>
-                <button id="pauze" class="Pauze">Pauze</button>
+                <button class="MainMenu" onclick="location.href='file:///D:/lamp/zaklampgame/Hole%20Game/Flashlight-Shizzle.html'">Main Menu</button>
+                <button id="pauze" class="Pauze" onclick="pause()">Pauze</button>
                 <div class="tijdding"id="tijd"><span id="countdowntimer">15</span></div>
             </div>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
             <img class="AantalSleutels" id="aantalsleutels" src="https://i.imgur.com/RC34b8L.png"></img>
             <a class="AantalKeys" id="clicks">0</a>
-
-
+            <div class="next" id="nextlevel">
+                    <button class="NextLevel" onclick="location.href='file:///D:/lamp/zaklampgame/Level--2--/Level-2.html'">Next Level</button>
+            </div>
+            <div class="start" id="start">
+                    <button class="NextLevel" onclick="setInterval()">start</button>
+            </div>
+            <div class="resume" id="resume">
+                    <button class="NextLevel" onclick="resume()">resume</button>
+            </div>
+            
             <div class="Field">
                     <div id="flash" class= "Flash">
                         <div class="Flash4"></div>
@@ -32,12 +40,12 @@
                         </div>
                     </div>
                 <div 
-                    id="finish" class="Finish" onclick="location.href='file:///C:/Users/allar/Desktop/html/ZakLampGame/A--ZakLampGame--V2--/Level--2--/Level-2.html'">
+                    id="finish" class="Finish" onclick="Next()">
                 </div>
                 
                 <img id="zoeksleutel" class="ZoekSleutel" src="https://i.imgur.com/PyqvNNk.png" onclick="clicker()">
             </div>
-
+            
             
             <script type="text/javascript" src="Level-1.js"></script>               
     </body>
