@@ -14,36 +14,65 @@ function clicker()                                                              
 {                                                                                                                                       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     clicks += 1;                                                                                                                        //elke keer als je klikt telt hij 1 er bij op.                                                               //
     document.getElementById('clicks').innerHTML = clicks;                                                                               //de uitkomt van clicks komt op de plek van id clicks                                                        //
-    document.getElementById('zoeksleutel').style.display="none";                                                                                //als je op id "key" klikt wordt de haalt hij hem weg van het scherm.                                        //
+    document.getElementById('zoeksleutel').style.display="none";                                                                        //als je op id "key" klikt wordt de haalt hij hem weg van het scherm.                                        //
 }                                                                                                                                       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                                        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////                            
-var timeleft = 15;                                                                                                                      //hier wordt een nieuwe variabel gemaakt (timeleft) en zetten we op 15 seconden.                             // 
-var Timer = setInterval(function(){                                                                                                     //de setinterval functie wordt Timer.                                                                        //
-timeleft--;                                                                                                                             //elke seconde gaat er 1 van timeleft af (15-14-13-12-11-10)                                                 //
-document.getElementById("countdowntimer").textContent = timeleft;                                                                       //id countdowntimer wordt timeleft. dus hij verrandert elke seconde.                                         //
-if(timeleft <= 0)                                                                                                                       //als timeleft kleiner is dan 0...                                                                           //
-window.location.replace("file:///C:/Users/allar/Desktop/html/ZakLampGame/A--ZakLampGame--V2--/Level--1--/Level-1.html");                //gaat hij naar de aangegeven locatie.                                                                       //
-if (timeleft <= 9){                                                                                                                     //als timeleft kleiner is dan 9...                                                                           //                                                      
-    document.getElementById("tijd").style.left = 110 + "px";                                                                            //wordt hij 110px vanaf links. dus 110 naar rechts. van het div blokje waar hij in zit.                      //
-}},1000);                                                                                                                               //hier stellen we in dat hij om de 1000 ms gaat (1 sec)                                                      //
-                                                                                                                                        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                                        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function getRandomPosition(element) {                                                                                                   //hier pakt hij de functie met de naam getRandomPosition(element) element = blokje                           //
-    var x = document.body.offsetHeight-element.clientHeight;                                                                            //hij pakt van de body de offsetheight en dan - element(blokje) clientheight. dit wordt dus nu x             //
-    var y = document.body.offsetWidth-element.clientWidth;                                                                              //hij pakt van de body de offsetwidth en dan - element(blokje) clientwidth. en dit y                         //
-    var randomX = Math.floor(Math.random()*x);                                                                                          //math.floor rond het getal af. math random pakt een random nummer tussen 0 en 1 en die 2 samen keer x       //
-    var randomY = Math.floor(Math.random()*y);                                                                                          //math.floor rond het getal af. math random pakt een random nummer tussen 0 en 1 en die 2 samen keer y       //
-    return [randomX,randomY];                                                                                                           //hij stopt de functie's en slaat de randomX en Y op voor hergebruik.                                        //                                                                                             
-}                                                                                                                                       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                                        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-window.onload = function () {                                                                                                           //zodra de pagina laad voert hij deze functie uit in plaats van de hele tijd.                                //
-    var blokje = document.getElementById('finish');                                                                                     //blokje = id "finish"                                                                                       //
-    var blokje2 = document.getElementById('zoeksleutel');                                                                                       //blokje2 = id "key"                                                                                         //
-    var xy = getRandomPosition(blokje);                                                                                                 //getRandomPosition(blokje) wordt xy hij pakt de resultaten van de bovenste random position.                 //                                                                      
-    blokje.style.top = xy[0] + 'px';                                                                                                    //hier word de top verrandert van wat er boven uitkomt                                                       //
-    blokje.style.left = xy[1] + 'px';                                                                                                   //hier word de left verrandert van wat er boven uitkomt                                                      //
-    blokje2.style.top = xy[1] + 'px';                                                                                                   //hier word de top verrandert van wat er boven uitkomt                                                       //
-    blokje2.style.left = xy[0] + 'px';                                                                                                  //hier word de left verrandert van wat er boven uitkomt                                                      //
-}                                                                                                                                       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                                        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var timeleft = 15;
+var tijd = true;
+
+
+function pause(){
+    tijd = false;
+    bok.style.zIndex = 94;
+    document.getElementById('resume').style.display='block';
+}
+function resume(){
+    tijd = true;
+    bok.style.zIndex = 1;
+    document.getElementById('resume').style.display='none';
+}
+                                                                                                                                        
+function setInterval(){
+    setTimeout(setInterval, 1000);
+        if(tijd == true){
+            bok.style.zIndex = 1;                                                                                                                       
+            timeleft--;                                                                                                                             
+            document.getElementById("countdowntimer").textContent = timeleft; 
+            document.getElementById('start').style.display='none'                                                                                
+        if(timeleft <= 0){
+            window.location.replace("../Game Over/Game Over.html");  
+}                                                                                                                                           
+if (timeleft <= 9){                                                                                                                                                                           
+    document.getElementById("tijd").style.left = 110 + "px";                                                                           
+}}}
+
+
+var bok = document.getElementById('flash')
+
+function next(){
+    tijd = false;
+    window.location.replace("../Level--2--/Level-2.html");
+}
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        
+function getRandomPosition(element) {
+    var x = document.body.offsetHeight-element.clientHeight;
+    var y = document.body.offsetWidth-element.clientWidth;
+    var randomX = Math.floor(Math.random()*x);
+    var randomY = Math.floor(Math.random()*y);
+    return [randomX,randomY];
+}                                                                                                                                       
+                                                                                                                                        
+window.onload = function () {                                                                                                           
+    var blokje = document.getElementById('finish');                                                                                     
+    var blokje2 = document.getElementById('zoeksleutel');                                                                               
+    var xy = getRandomPosition(blokje);                                                                                                                                                                       
+    blokje.style.top = xy[0] + 'px';                                                                                                    
+    blokje.style.left = xy[1] + 'px';                                                                                                   
+    blokje2.style.top = xy[1] + 'px';                                                                                                   
+    blokje2.style.left = xy[0] + 'px';                                                                                                  
+}                                                                                                                                       
+                                                                                                                                        
 

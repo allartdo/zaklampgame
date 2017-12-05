@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+}
+.Credits {
+    color: white;
+    font-size: 150px;
+    top: -50px;
+    left: 700px;
+    position: absolute;
+}
+.Creators {
+    color: white;
+    font-size: 70px;
+    left: 810px;
+    top: 250px;
+    position: absolute;
+}
+.Testers {
+    left: 80px;
+}
+.THNamen {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    top: 350px;
+    left: 200px;
+    width: 250px;
+    line-height: 70px;
+}
+.AWN {
+    color: white;
+    position: absolute;
+    font-size: 27px;
+    top: 350px;
+    left: 860px;
+    width: 200px;
+    line-height: 70px;
+}
+.Idea {
+    left: 1500px;
+}
+.INames {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    top: 350px;
+    left: 1500px;
+    width: 250px;
+    line-height: 70px;
+}
+.MainMenu {
+    position: absolute;
+    top: 870px;
+    left: 1620px;
+    width: 300px;
+    height: 100px;
+    background-color: black;
+    box-shadow: inset 0px 0px 5px 5px white;
+    color: white;
+    font-size: 40px;
+    border: solid 1px white;
+}

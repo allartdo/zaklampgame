@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+
+    <head> 
+            <meta charset="utf-8">
+            <title>Level 10</title>
+            <link rel="stylesheet" type="text/css" href="./Level-10.css">
+            <link rel="stylesheet" type="text/css" href="../Basis-6-10.css">
+    </head>
+
+
+    <body>
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">        
+        <h1 class="TxTLevel1">Level 10</h1>
+
+
+                <div class="Menu">
+                    <button class="MainMenu" onclick="location.href='../Hole Game/Flashlight-Shizzle.html'">Main Menu</button>
+                    <button id="pauze" class="Pauze" onclick="pause()">Pauze</button>
+                    <div class="TijdDing" id="tijd"><span id="countdowntimer">5</span></div>
+                </div>
+
+
+                <div class="Next" id="nextlevel">
+                        <button class="NextLevel" onclick="location.href='../Hole Game/Flashlight-Shizzle.html'"><b class="NextTekst">Next Level</b></button>
+                </div>
+
+                <div class="Next" id="resume">
+                    <button class="NextLevel" onclick="resume()"><b class="NextTekst">Resume</b></button>
+                </div>
+                
+
+                <div class="Field">
+                    <div id="flash" class= "Flash">
+                        <div class="Flash4"></div>
+                        <div class="Flash5"></div>
+                        <div class="Flash2">
+                        <div class="Flash3"></div>
+                        </div>
+                    </div>
+                    <div 
+                        id="finish" class="Finish" onclick="next()">
+                    </div>
+                </div>
+        
+
+        <script type="text/javascript" src="../Basis-6-10.js"></script>
+        <script> 
+            var timeleft = 6; 
+            function next() {
+                tijd = false;
+                window.location.replace("../Hole Game/Flashlight-Shizzle.html");
+            }
+       </script>           
+        
+    </body>
+
+</html>

@@ -4,42 +4,56 @@
     <head> 
             <meta charset="utf-8">
             <title>Level 1</title>
-            <link rel="stylesheet" type="text/css" href="Level-1.css">
+            <link rel="stylesheet" type="text/css" href="./Level-1.css">
+            <link rel="stylesheet" type="text/css" href="../Basis-1-5.css">
     </head>
 
     <body>
-
-            <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">        
-            <h1 class="TxTLevel1">Level 1</h1>
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">        
+        <h1 class="TxTLevel1">Level 1</h1>
 
 
             <div class="Menu">
-                <button class="MainMenu" onclick="location.href='file:///C:/Users/allar/Desktop/html/ZakLampGame/A--ZakLampGame--V2--/Hole%20Game/Flashlight-Shizzle.html'">Main Menu</button>
-                <button id="pauze" class="Pauze">Pauze</button>
+                <button class="MainMenu" onclick="location.href='../Hole Game/Flashlight-Shizzle.html'">Main Menu</button>
+                <button id="pauze" class="Pauze" onclick="pause()">Pauze</button>
                 <div class="tijdding"id="tijd"><span id="countdowntimer">15</span></div>
             </div>
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-            <img class="AantalSleutels" id="aantalsleutels" src="https://i.imgur.com/RC34b8L.png"></img>
-            <a class="AantalKeys" id="clicks">0</a>
 
+
+                <img class="AantalSleutels" id="aantalsleutels" src="https://i.imgur.com/RC34b8L.png"></img>
+                <a class="AantalKeys" id="clicks">0</a>
+            
+                    <div class="Next" id="nextlevel">
+                        <button class="NextLevel" onclick="location.href='../Level--2--/Level-2.html'"><b class="NextTekst">Next Level</b></button>
+                    </div>
+                    
+                        <div class="Next Start" id="start">
+                            <button class="NextLevel" onclick="setInterval()"><b class="NextTekst">Start</b></button>
+                        </div>
+
+                    <div class="Next" id="resume">
+                        <button class="NextLevel" onclick="resume()"><b class="NextTekst">Resume</b></button>
+                    </div>
+            
 
             <div class="Field">
-                    <div id="flash" class= "Flash">
-                        <div class="Flash4"></div>
-                        <div class="Flash5"></div>
-                        <div class="Flash2">
-                        <div class="Flash3"></div>
-                        </div>
+                <div id="flash" class= "Flash">
+                    <div class="Flash4"></div>
+                    <div class="Flash5"></div>
+                    <div class="Flash2">
+                    <div class="Flash3"></div>
                     </div>
-                <div 
-                    id="finish" class="Finish" onclick="location.href='file:///C:/Users/allar/Desktop/html/ZakLampGame/A--ZakLampGame--V2--/Level--2--/Level-2.html'">
                 </div>
+
+                    <div 
+                        id="finish" class="Finish" onclick="next()">
+                    </div>
                 
                 <img id="zoeksleutel" class="ZoekSleutel" src="https://i.imgur.com/PyqvNNk.png" onclick="clicker()">
             </div>
-
             
-            <script type="text/javascript" src="Level-1.js"></script>               
+
+        <script type="text/javascript" src="./Level-1.js"></script>               
     </body>
 
 </html>

@@ -19,3 +19,6 @@ if (left < 20) {                                                    // Als Left 
     clearInterval(snelheid);                                        // Hier zet hij de setInterval van goLeft weer op 0 (wat hij al stond)                      //
     reset = setInterval(goRight);                                   // Maakt een snelheid aan voor goRight                                                      //                         
 }}                                                                  //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
